@@ -2,12 +2,16 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+from clsrm.models import Wheel
+
+
 def index(request):
     return render(request,'home/home.html')
 
 
 def home(request):
-    return render(request,'home/home.html')
+    wheels = Wheel.objects.all()
+    return render(request,'home/home.html',{'wheels':wheels})
 
 
 def market(request):

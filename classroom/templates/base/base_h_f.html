@@ -22,7 +22,7 @@
 {% block body %}
 
     {% block header %}
-        <header>头部</header>
+        <header>爱鲜蜂</header>
     {% endblock %}
 
 {#    挖坑中间#}
@@ -31,6 +31,31 @@
     {% endblock %}
 
     {% block footer %}
-        <footer>尾部</footer>
+        <footer>
+            <a href="{% url 'axf:home' %}">
+                <dl class="home">
+                    <dt><span></span></dt>
+                    <dd>首页</dd>
+                </dl>
+            </a>
+            <a href="{% url 'axf:market' %}">
+                <dl class="market">
+                    <dt><span></span></dt>
+                    <dd>购物超市</dd>
+                </dl>
+            </a>
+            <a href="{% url 'axf:cart' %}">
+                <dl class="cart">
+                    <dt><span></span></dt>
+                    <dd>购物车</dd>
+                </dl>
+            </a>
+            <a href="{% url 'axf:mine' %}">
+                <dl class="mine">
+                    <dt><span></span></dt>
+                    <dd>我的</dd>
+                </dl>
+            </a>
+        </footer>
     {% endblock %}
 {% endblock %}
