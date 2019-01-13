@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{#填坑css#}
+{% block extbasecss %}
+    <link rel="stylesheet" href="{% static 'base/css/base_h_f.css' %}">
+{#    再挖一个css坑#}
+    {% block extcss %}
+    {% endblock %}
+{% endblock %}
+
+{#填坑js#}
+{% block extbasejs %}
+    <script src="{% static 'base/js/base_h_f.js' %}"></script>
+{#    再挖一个js坑#}
+    {% block extjs %}
+
+    {% endblock %}
+{% endblock %}
+
+{#填坑body#}
+{% block body %}
+
+    {% block header %}
+        <header>头部</header>
+    {% endblock %}
+
+{#    挖坑中间#}
+    {% block content %}
+
+    {% endblock %}
+
+    {% block footer %}
+        <footer>尾部</footer>
+    {% endblock %}
+{% endblock %}
