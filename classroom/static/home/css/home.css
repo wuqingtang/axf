@@ -1,6 +1,12 @@
+.home{
+    /*width: 100%;*/
+}
+
 footer .home span {
-	background: url(/static/base/img/home1.png) no-repeat center;
-	background-size: 1.25rem;
+    background-image: url(/static/base/img/home1.png);
+}
+footer .home dd {
+    color: #ffd601;
 }
 
 /* 头部轮播图部分*/
@@ -26,6 +32,7 @@ footer .home span {
 #topSwiper .swiper-pagination{
     bottom: 0px;
 }
+
 
 /* 导航部分*/
 .nav{
@@ -210,7 +217,3 @@ footer .home span {
 .main .main-wrapper .shoplist .shopitem button span{
 
 }
-
-
-
-

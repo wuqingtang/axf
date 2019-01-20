@@ -1,60 +1,57 @@
 {% extends 'base/base.html' %}
 {% load static %}
 
-{#填坑css#}
 {% block extbasecss %}
     <link rel="stylesheet" href="{% static 'base/css/base_h_f.css' %}">
-{#    再挖一个css坑#}
     {% block extcss %}
     {% endblock %}
 {% endblock %}
 
-{#填坑js#}
 {% block extbasejs %}
     <script src="{% static 'base/js/base_h_f.js' %}"></script>
-{#    再挖一个js坑#}
     {% block extjs %}
-
     {% endblock %}
 {% endblock %}
 
-{#填坑body#}
 {% block body %}
-
+{#    头部#}
     {% block header %}
         <header>爱鲜蜂</header>
     {% endblock %}
 
-{#    挖坑中间#}
+{#    主体内容#}
     <div class="hidescroll">
-        {% block content %}
+        <div id="content">
+            {% block content %}
 
-        {% endblock %}
+            {% endblock %}
+        </div>
     </div>
 
+{#    尾部#}
     {% block footer %}
         <footer>
-            <a href="{% url 'axf:home' %}">
-                <dl class="home">
-                    <dt><span></span></dt>
+            <a href="{% url 'cls:home' %}" class="home">
+                <dl>
+                    <dt> <span></span> </dt>
                     <dd>首页</dd>
                 </dl>
             </a>
-            <a href="{% url 'axf:market' %}">
-                <dl class="market">
-                    <dt><span></span></dt>
-                    <dd>购物超市</dd>
+            <a href="{% url 'cls:market' 0 1  %}" class="market">
+                <dl>
+                    <dt> <span></span> </dt>
+                    <dd>闪购超市</dd>
                 </dl>
             </a>
-            <a href="{% url 'axf:cart' %}">
-                <dl class="cart">
-                    <dt><span></span></dt>
+            <a href="{% url 'cls:cart' %}" class="cart">
+                <dl>
+                    <dt> <span></span> </dt>
                     <dd>购物车</dd>
                 </dl>
             </a>
-            <a href="{% url 'axf:mine' %}">
-                <dl class="mine">
-                    <dt><span></span></dt>
+            <a href="{% url 'cls:mine' %}" class="mine">
+                <dl>
+                    <dt> <span></span> </dt>
                     <dd>我的</dd>
                 </dl>
             </a>
